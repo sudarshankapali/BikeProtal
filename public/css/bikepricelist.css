@@ -1,0 +1,48 @@
+.main {
+    display: grid;
+    justify-content: center;
+}
+
+.table-container {
+    margin: 20px auto;
+    width: 70%;
+}
+
+.price-table {
+    width: 100%;
+    border-collapse: collapse;
+}
+
+.price-table th,
+.price-table td {
+    padding: 8px;
+    border: 1px solid #ddd;
+}
+
+.price-table th {
+    background-color: #f2f2f2;
+    font-weight: bold;
+    text-align: left;
+}
+
+.price-table tbody tr:nth-child(even) {
+    background-color: #f2f2f2;
+}
+
+#bike-price {
+    display: grid;
+    justify-items: center;
+
+    align-items: center;
+}
+
+.bike-price-heading {
+    display: grid;
+    justify-content: center;
+    grid-template-rows: 50% 50%;
+    align-items: center;
+}
+.bike-pride-heading > div > h2 {
+    display: grid;
+    justify-content: center;
+}

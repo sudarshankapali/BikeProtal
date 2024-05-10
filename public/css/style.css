@@ -1,0 +1,474 @@
+/* * {
+    margin: 0px;
+    padding: 0px;
+} */
+
+#main {
+    background-color: white;
+}
+
+#header {
+    display: grid;
+    background-color: white;
+    grid-template-rows: 45% 30%;
+    height: 200px;
+}
+
+li {
+    list-style: none;
+    font-size: 0.8rem;
+}
+
+.navigation li {
+    cursor: pointer;
+    /* Change cursor to indicate interactivity */
+}
+
+.navigation li:hover {
+    /* Style changes on hover */
+    text-decoration: none;
+    /* Optional: change background color on hover */
+}
+
+.dropdown {
+    /* Styles for dropdown items (parent li elements) */
+    position: relative;
+    /* Needed for proper positioning of dropdown content */
+}
+
+.dropdown-content {
+    /* Styles for dropdown content (nested ul elements) */
+    display: none;
+    /* Initially hide the dropdown content */
+    position: absolute;
+    /* Positions the content below the button */
+    background-color: #f1f1f1;
+    min-width: 160px;
+    /* Set a minimum width for the dropdown */
+    box-shadow: 0px 8px 16px 0px rgba(0, 0, 0, 0.2);
+    /* Optional: add a shadow effect */
+    z-index: 1;
+    /* Ensures the dropdown content stays on top of other elements */
+}
+
+.dropdown-content a {
+    color: black;
+    padding: 12px 16px;
+    text-decoration: none;
+    display: block;
+    /* Makes the options behave like buttons */
+}
+
+.dropdown-content a:hover {
+    background-color: #ddd;
+}
+
+/* Change background color on hover  */
+
+.dropdown:hover .dropdown-content {
+    display: block;
+    /* Show the dropdown content on hover */
+}
+
+.dropdown-popularbrands {
+    position: relative;
+    margin-bottom: 10px;
+}
+
+.dropdown-popularbrands .dropdown-content {
+    display: none;
+}
+
+.dropdown:hover .dropdown-popularbrands:hover .dropdown-content {
+    display: block;
+}
+
+.dropdown:hover .dropdown-popularbrands .dropdown-content {
+    display: none;
+}
+
+.dropdown-popularbrands .dropdown-content {
+    left: 100%;
+    top: 0;
+}
+
+.dropdown-bikesbybudget {
+    position: relative;
+    margin-bottom: 10px;
+}
+
+.dropdown-bikesbybudget .dropdown-content {
+    display: none;
+}
+
+.dropdown:hover .dropdown-bikesbybudget:hover .dropdown-content {
+    display: block;
+}
+
+.dropdown:hover .dropdown-bikesbybudget .dropdown-content {
+    display: none;
+}
+
+.dropdown-bikesbybudget .dropdown-content {
+    left: 100%;
+    top: 0;
+}
+
+.dropdown-bikesbybodytype {
+    position: relative;
+    margin-bottom: 10px;
+}
+
+.dropdown-bikesbybodytype .dropdown-content {
+    display: none;
+}
+
+.dropdown:hover .dropdown-bikesbybodytype:hover .dropdown-content {
+    display: block;
+}
+
+.dropdown:hover .dropdown-bikesbybodytype .dropdown-content {
+    display: none;
+}
+
+.dropdown-bikesbybodytype .dropdown-content {
+    left: 100%;
+    top: 0;
+}
+
+.dropdown-scootersbybodytype .dropdown-content {
+    display: none;
+}
+
+.dropdown:hover .dropdown-scootersbybodytype:hover .dropdown-content {
+    display: block;
+}
+
+.dropdown:hover .dropdown-scootersbybodytype .dropdown-content {
+    display: none;
+}
+
+.dropdown-scootersbybodytype .dropdown-content {
+    left: 100%;
+    top: 0;
+}
+
+.logosearch {
+    background-color: white;
+    display: grid;
+    grid-template-columns: 50% 50%;
+    justify-content: center;
+    align-items: center;
+}
+
+.logosearch>div>div>img {
+    height: 48px;
+    aspect-ratio: auto 92 / 48;
+    width: 92px;
+    overflow-clip-margin: content-box;
+    overflow: clip;
+}
+
+.logosearch>div>input {
+    border-radius: 1rem;
+}
+
+.logosearch>div>button {
+    border-radius: 1rem;
+}
+
+.navigation {
+    background-color: rgb(0, 56, 148);
+}
+
+.navigation>ul {
+    margin-top: 12px;
+    color: white;
+    display: grid;
+    /* grid-template-columns: 5% 5% 8% 12% 10% 8% 10%; */
+    grid-template-columns: auto auto auto auto auto auto auto;
+    column-gap: 20px;
+
+    justify-content: center;
+}
+
+#hero-section {
+    margin-top: 2rem;
+}
+
+#hero-section>div {
+    height: 100%;
+    object-fit: cover;
+    width: 100%;
+    /* opacity: 0.6; */
+}
+
+#hero-section>div>div>img {
+    overflow-clip-margin: content-box;
+    overflow: clip;
+    width: 100%;
+    object-fit: cover;
+    width: 100%;
+}
+
+.search-bike {
+    left: 0px;
+    margin-left: auto;
+    margin-right: auto;
+    padding: 5px;
+    position: absolute;
+    right: 0px;
+    text-align: center;
+    bottom: 150px;
+    z-index: 10;
+    color: rgb(68, 68, 68);
+}
+
+#explore {
+    margin-top: 3rem;
+    display: grid;
+    grid-template-rows: 25% 70%;
+    justify-content: center;
+    background-color: rgb(240 238 228);
+    /* opacity: 0.8; */
+}
+
+.explore-heading {
+    display: grid;
+    justify-content: center;
+    font-weight: bold;
+    unicode-bidi: isolate;
+}
+
+.explore-content {
+    margin-top: 2rem;
+    margin-right: 1rem;
+    margin-left: 1rem;
+    margin-bottom: 2rem;
+}
+
+.explore-content>div {
+    display: grid;
+    column-gap: 1.5rem;
+    grid-template-columns: 40% 40% 40% 40%;
+    justify-content: space-around;
+    align-content: center;
+}
+
+.explore-content>div>div {
+    display: grid;
+    background-color: white;
+    row-gap: 0.3rem;
+    border-radius: 0.5rem;
+    justify-content: center;
+    cursor: pointer;
+}
+
+.explore-content>div>div>div {
+    display: grid;
+    background-color: white;
+    justify-content: center;
+}
+
+/* #explore > div > h3 {
+    display: grid;
+    justify-content: center;
+    font-weight: bold;
+    unicode-bidi: isolate; */
+/* } */
+
+#search-by-bikes {
+    display: grid;
+    margin-top: 3rem;
+    grid-template-rows: 25% 70%, 25%;
+    justify-content: center;
+    background-color: rgb(240 238 228);
+}
+
+.search-by-bikes-heading {
+    display: grid;
+    justify-content: center;
+    font-weight: bold;
+    unicode-bidi: isolate;
+}
+
+.specification {
+    color: red;
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 10px;
+    cursor: pointer;
+}
+
+hr {
+    border-width: 1px;
+    border-color: black;
+    border-style: solid;
+    margin-top: 5px;
+    margin-bottom: 20px;
+}
+
+/* .grid-item {
+        padding: 10px;
+        border: 1px solid #ddd;
+      } */
+
+.brand-images {
+    display: grid;
+    padding: 10px;
+    grid-template-columns: auto auto auto auto auto auto;
+    justify-content: center;
+    gap: 10px;
+}
+
+.brand-images>div>img {
+    display: grid;
+    padding: 20px;
+    align-items: center;
+    cursor: pointer;
+}
+
+.show-all {
+    margin-top: 1.5rem;
+    display: grid;
+    grid-template-columns: auto auto;
+    justify-content: center;
+    align-items: center;
+    font-weight: bold;
+    color: red;
+}
+
+#bikes-in-sportlight {
+    margin: 3rem;
+    display: grid;
+    grid-template-rows: auto auto;
+    justify-content: center;
+}
+
+.bikes-in-sportlight-heading {
+    display: grid;
+    justify-content: center;
+    font-weight: bold;
+    unicode-bidi: isolate;
+}
+
+.spotlight {
+    display: grid;
+    grid-template-columns: repeat(7, 1fr);
+    justify-content: center;
+    justify-content: space-around;
+    gap: 10px;
+    cursor: pointer;
+    color: red;
+}
+
+.bike-img {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+}
+
+.bike-img>div {
+    display: grid;
+    grid-template-rows: repeat(2, 1fr);
+    border: 2px solid black;
+    border-radius: 1rem;
+    padding: 10px;
+    margin: 10px;
+}
+
+/* end of bike section */
+
+#latest-news {
+    margin: 3rem;
+    display: grid;
+    grid-template-rows: auto auto;
+    justify-content: center;
+}
+
+.latest-news-heading {
+    display: grid;
+    justify-content: center;
+    font-weight: bold;
+    unicode-bidi: isolate;
+}
+
+.latest-news-contents {
+    display: grid;
+    grid-template-columns: auto auto auto;
+    row-gap: 0.3rem;
+    border-radius: 1rem;
+    justify-content: center;
+    cursor: pointer;
+}
+
+/* end of latest news */
+
+#latest-article {
+    margin: 3rem;
+    display: grid;
+    grid-template-rows: auto auto;
+    justify-content: center;
+}
+
+.latest-article-heading {
+    display: grid;
+    justify-content: center;
+    font-weight: bold;
+    unicode-bidi: isolate;
+}
+
+.article-img {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+}
+
+.article-img>div {
+    display: grid;
+    grid-template-rows: repeat(2, 1fr);
+    padding: 10px;
+    margin: 10px;
+}
+
+#footer {
+    margin-top: 3rem;
+    margin-bottom: 1rem;
+    display: grid;
+    grid-template-rows: repeat(2, 1fr);
+    justify-content: center;
+    background-color: black;
+    color: white;
+}
+
+.footer-first {
+    display: grid;
+    grid-template-columns: auto auto auto;
+    justify-content: center;
+    justify-content: space-around;
+    gap: 4rem;
+    align-items: center;
+}
+
+.footer-first>div>ul {
+    display: grid;
+    grid-template-columns: auto auto auto auto;
+    justify-content: space-around;
+    gap: 1.5rem;
+}
+
+.all-right-reserved {
+    display: grid;
+    justify-content: center;
+}
+
+.all-right-reserved>div>hr {
+    border-width: 2px;
+    border-color: white;
+    border-style: solid;
+    margin-top: 5px;
+    margin-bottom: 20px;
+}
+
+.footer-first>div>ul>li>a {
+    color: white;
+    text-decoration: none;
+}
